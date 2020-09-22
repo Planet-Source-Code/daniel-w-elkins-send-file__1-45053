@@ -1,0 +1,24 @@
+Info Port : 9010
+Data Port : 4050
+
+Packet Header : "Z{L"
+Packet Delimeter : "a<  "
+
+* Replace every instance of "/" with a packet delimter
+* Replace ever instance of "H" with a packet header
+
+Sender :
+
+	- File Transfer Request : H/F/FileName/FileSize
+	- Ready Signal : H/R
+
+Receiver :
+
+	- File Transfer Request :
+		- Accepted : H/F/Accepted
+		- Denied : H/F/Denied
+
+Types :
+
+	F - File Transfer Request
+	R - Ready Signal
